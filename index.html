@@ -1,0 +1,89 @@
+<html> 
+ <head>
+  <link type="text/css" rel="stylesheet" href="main.css" />
+  <title>
+Stunning Soda
+  </title>
+  
+  <script>
+  function banner(){ 
+var text = confirm("Allow this site to take you to Pepsi.com?"); 
+return text; 
+}
+function answer(){ 
+var radio = document.getElementsByName("trivia"); 
+var selection = false; 
+var message = "";
+for( var i = 0; i < radio.length; i++) {
+if(radio[i].value == "kcr" && radio[i].checked == true) { 
+selection = true;
+if(selection == true) {
+message = message + "<b><p style='color:green'>Noice</p></b>"; 
+} else { 
+message = message + "<b><p style='color:red'>Nope</p></b>"; 
+}
+document.getElementById("response").innerHTML = message; 
+} //end if statement 
+} //end for loop
+} //end function answer    
+  </script>
+  <style>
+  
+  </style> 
+ </head>
+ <footer>Stunning Soda</footer> 
+ <body id="background">
+    <a href="https://www.pepsi.com/en-us/" onclick="return banner()"> 
+    <header>
+    </header>
+    </a>   
+  <h1>
+   
+    <span class="wrap-text">5 Delicious Sodas</span>
+
+    <center><p><i>The 5 Delicious Sodas are</i>: <b>Coca-Cola</b>, <b>Dr.Pepper</b>, <b>Pepsi</b>, <b>Mountain Dew</b>, and <b>Sprite</b></p></center>
+
+
+  <ol>
+   <div class="wrap-list"> 
+    <li class="listitem">All deze sodaz r gud</li>
+    <li class="listitem">I luv all deze sodaz</li>
+    <li class="listitem">my fav iz Dr. Pepper</li>
+   </div> 
+  </ol>
+
+<center><p class="paragraph">Now, if you've drank these sodas, try to complete the trivia question below.</p></center>
+
+ <h2>Which of these options has a cherry, blue rasberry, and holiday flavor?</h2>
+
+  <form>
+   <div id="response"> </div> 
+   <div class="wrap-trivia"> 
+    <input type="radio" name="trivia" value="No"> Dr.Pepper </Dr> <br>
+    <input type="radio" name="trivia" value="Yes"> Mountain Dew <br>
+    <input type="radio" name="trivia" value="No"> Sprite <br>
+    <input type="radio" name="trivia" value="No"> Coca-Cola <br> 
+    <input type="button" id="submit" value="Submit Submit Submit" onclick="answer()">
+   </div> 
+  </form>
+
+<center><p>Here are some commercials from each brand</p></center>
+
+<center><iframe width="640" height="360" src="https://www.youtube.com/embed/tsZajY25Qs0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+<iframe width="640" height="360" src="https://www.youtube.com/embed/vDNzWs2cdNo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/yh5CrxiKNGI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/ql7uY36-LwA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/TkzAgsOQJQE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+
+<hr>
+
+<center><a href="https://us.coca-cola.com/">Coca-Cola</a>
+<a href="https://www.drpepper.com/en?gclid=CjwKCAiA1uHSBRBUEiwAkBCtzSjtci8nR6TUMpIiZE3pvIB09A517WrGDuXleJffNJh0Qn3qO8_N2xoC0g4QAvD_BwE&gclsrc=aw.ds">Dr.Pepper</a>
+<a href="https://www.pepsi.com/en-us/">Pepsi</a>
+<a href="http://www.mountaindew.com/">Mountain Dew</a>
+<a href="https://www.sprite.com/">Sprite</a></center>
+
+
+   </h1> 
+ </body> 
+</html>
