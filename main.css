@@ -82,5 +82,5 @@
               }
             
             body {
-              background: radial-gradient(100% 100% at 10% 30%, red, darkblue, maroon);
+              background: radial-gradient(100% 75% at 10% 30%, red, darkblue, maroon);
               }    

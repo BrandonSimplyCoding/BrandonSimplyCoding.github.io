@@ -3,21 +3,21 @@
   <link type="text/css" rel="stylesheet" href="main.css" />
   <title>Cool Cola</title>
   <script>
-function answer(){ 
-var radio = document.getElementsByName("trivia"); 
+function answer(){
+  var radio = document.getElementsByName("trivia"); 
 var selection = false; 
 var message = "";
 for( var i = 0; i < radio.length; i++) {
-if(radio[i].value == "kcr" && radio[i].checked == true) { 
-selection = true;
-if(selection == true) {
-message = message + "<b><p style='color:green'>Noice</p></b>"; 
-} else { 
-message = message + "<b><p style='color:red'>Nope</p></b>"; 
-}
-document.getElementById("response").innerHTML = message; 
+if(radio[i].value == "Yes" && radio[i].checked == true) { 
+selection = true; 
 } //end if statement 
 } //end for loop
+if(selection == true) {
+message = message + "<b><p style='color:darkgreen'>Very Noice</p></b>"; 
+} else { 
+message = message + "<b><p style='color:darkred'>Nope</p></b>"; 
+}
+document.getElementById("response").innerHTML = message; 
 } //end function answer    
   </script>
   <style>
@@ -29,7 +29,7 @@ document.getElementById("response").innerHTML = message;
     <div class="container">
         <div class="container">
 
-            <div class="col-xs-12 col-sm-4" id="logo"><img class="irc_mi" src="http://s3.thingpic.com/images/Vh/YA111FcqSeUhd4hVXMfvjwmu.jpeg" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="304" height="171" style="margin-top: 111px;" alt="Image result"></div>
+           <center><div class="col-xs-12 col-sm-4" id="logo"><img class="irc_mi" src="http://s3.thingpic.com/images/Vh/YA111FcqSeUhd4hVXMfvjwmu.jpeg" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="304" height="171" style="margin-top: 111px;" alt="Image result"></div></center>
 
         </div><!-- end container div --> 
 
@@ -73,7 +73,7 @@ document.getElementById("response").innerHTML = message;
  <h2>Which of these Colas used to have a drug in them?</h2>
 
   <form>
-   <div id="response"> </div> 
+    <div id="response"> </div>
    <div class="wrap-trivia"> 
     <input type="radio" name="trivia" value="No"> Dr.Pepper </Dr> <br>
     <input type="radio" name="trivia" value="Yes"> Coca-Cola <br>
