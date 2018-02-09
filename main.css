@@ -26,14 +26,6 @@
     background-color: red;
     display: inline-block;
     }   
-
-    header {
-      height:350px;
-      width:97%;
-      border:10px solid black;
-      background-color: rgb(255, 51, 51);
-      margin-bottom:20em;
-    }
     
      .wrap-trivia {
        height:85px;
@@ -83,4 +75,16 @@
             
             body {
               background: radial-gradient(100% 75% at 10% 30%, red, darkblue, maroon);
-              }    
+              }
+            
+              #header {
+                text-align:center;
+                background-color:rgb(58, 16, 8);
+                font-size:2.75em;
+                text-decoration:bold;
+                color:white;
+                border-radius:10px;
+                margin-left:-16px;
+                margin-right:-16px;
+                margin-bottom:15px;
+                }  

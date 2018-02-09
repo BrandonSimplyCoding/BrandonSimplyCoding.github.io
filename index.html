@@ -48,7 +48,40 @@ document.getElementById("response").innerHTML = message;
 
         <div class="row"> 
           <div class="col-xs-12 col-sm-8" id="comments">COMMENTS
-          <div class="col-xs-12 col-sm-4" id="form">FORM </div>
+          <div class="col-xs-12 col-sm-4" id="form"><header id="header">DROP A COMMENT</header>
+                            <form id="form-inline">
+                              <label>Name: </label> 
+                              <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                              <label>Color: </label> 
+                              <select class="form-control">
+                               <option> BLACK </option> 
+                               <option> WHITE </option> 
+                               <option> RED </option> 
+                               <option> BLUE </option> 
+                              </select>
+                            </form>
+                            <form class="form-horizontal">
+                              <label class="control-label"> Title: </label>
+                              <input type="text" class="form-control" id="title" placeholder="Enter Comment Title">
+                              <label>Background Color</label>
+                              <select id="form-control"> 
+                                  <option> BLACK </option>
+                                  <option> WHITE </option>
+                                  <option> RED </option>
+                                  <option> BLUE </option>  
+                              </select>
+                            </form>
+                            <form class="form-inline">
+                                <label class="control-label"> Icons: </label>
+                                <input type="radio" name="icon">
+                                <img src="coke.png" class="icon" />
+                                <input type="radio" name="icon">
+                                <img src="pepsi.png" class="icon" />
+                            </form>
+                            <label id="control-label">Comment:</label>
+                            <textarea id="control" row=8> </textarea>
+                            <input class="btn btn-default" type="button" value="Submit Comment">
+                          </div>
         </div>
         </div> <!-- end comment row -->
 
