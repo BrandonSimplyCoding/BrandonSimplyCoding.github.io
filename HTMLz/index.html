@@ -22,7 +22,97 @@ document.getElementById("response").innerHTML = message;
   </script>
   <style>
   
-  </style> 
+  </style>
+
+<script>
+function validate(){
+var name = document.getElementById("textarea");
+var blank_field = false;
+if(name.value == ""){
+name.style.backgroundColor = "pink";
+blank_field = true;
+} else {
+name.style.backgroundColor = "lightgreen";
+}
+
+var name = document.getElementById("name");
+var blank_field = false;
+if(name.value == ""){
+name.style.backgroundColor = "pink";
+blank_field = true;
+} else {
+name.style.backgroundColor = "lightgreen";
+}
+
+var name = document.getElementById("title");
+var blank_field = false;
+if(name.value == ""){
+name.style.backgroundColor = "pink";
+blank_field = true;
+} else {
+name.style.backgroundColor = "lightgreen";
+}
+
+//Drop Down Menu Validation
+var text_color = document.getElementById("text_color");
+var bg_color = document.getElementById("bg_color");
+
+if(text_color.value == "Choose A Color"){
+  text_color.style.border = "2px solid red";
+blank_field = true;
+} else if (bg_color.value == "Choose A Color") {
+  bg_color.style.border = "2px solid red";
+blank_field = true;
+} else {
+  text_color.style.border = "none";
+bg_color.style.border = "none";
+}
+
+//Radio Button Validation
+var icon = document.getElementsByName("icon");
+var radiobtns = document.getElementById("radiobtns");
+var blank_radio = true;
+
+for(var i=0; i < icon.length; i++){
+  if(icon[i].checked == true){
+    blank_radio = false;
+
+}
+}
+
+if(blank_radio == true){
+radiobtns.style.border = "2px solid red";
+blank_field = true;
+} else { 
+radiobtns.style.border = "none";
+}
+
+//Error Message
+var message = document.getElementById("message");
+if(blank_field == true){
+  message.innerHTML = "<h3 style='color:red;'>You Still Need to do This!</h3>"; 
+} else {
+  message.innerHTML = "";
+}
+add();
+}//end function validate
+
+var array = [];
+
+function add(){
+show();
+}//end function add
+
+function show(){
+  var display=document.getElementById("display");
+var post=""; 
+for(var i=0; i < array.length; i++){
+post+="<strong> "+array[i].name+ "</strong><br>"; 
+}
+display.innerHTML = post;
+}//end function show
+</script>
+ 
  </head>
  <footer></footer> 
  <body id="background">
@@ -32,7 +122,7 @@ document.getElementById("response").innerHTML = message;
            <center><div class="col-xs-12 col-sm-4" id="logo"><img class="irc_mi" src="http://s3.thingpic.com/images/Vh/YA111FcqSeUhd4hVXMfvjwmu.jpeg" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="304" height="171" style="margin-top: 111px;" alt="Image result"></div></center>
 
         </div><!-- end container div --> 
-
+        <div id="display"></div>
       </div><!-- end container div -->
       <div class="row"> 
 
@@ -47,13 +137,15 @@ document.getElementById("response").innerHTML = message;
         </div> <!-- end menu row -->
 
         <div class="row"> 
-          <div class="col-xs-12 col-sm-8" id="comments">COMMENTS
+          <div class="col-xs-12 col-sm-8" id="comments">
           <div class="col-xs-12 col-sm-4" id="form"><header id="header">DROP A COMMENT</header>
+                                                    <div id="message"></div>
                             <form id="form-inline">
-                              <label>Name: </label> 
+                              <label id="label1">Name: </label> 
                               <input type="text" class="form-control" id="name" placeholder="Enter Name">
-                              <label>Color: </label> 
-                              <select class="form-control">
+                              <label id="label2">Color: </label> 
+                              <select id="text_color" class="form-control">
+                               <option>Choose A Color</option> 
                                <option> BLACK </option> 
                                <option> WHITE </option> 
                                <option> RED </option> 
@@ -61,10 +153,11 @@ document.getElementById("response").innerHTML = message;
                               </select>
                             </form>
                             <form class="form-horizontal">
-                              <label class="control-label"> Title: </label>
+                              <label class="control-label" id="label3"> Title: </label>
                               <input type="text" class="form-control" id="title" placeholder="Enter Comment Title">
-                              <label>Background Color</label>
-                              <select id="form-control"> 
+                              <label id="label4"> Background Color: </label>
+                              <select id="bg_color" id="form-control">
+                                  <option>Choose A Color</option> 
                                   <option> BLACK </option>
                                   <option> WHITE </option>
                                   <option> RED </option>
@@ -72,15 +165,15 @@ document.getElementById("response").innerHTML = message;
                               </select>
                             </form>
                             <form class="form-inline">
-                                <label class="control-label"> Icons: </label>
-                                <input type="radio" name="icon">
+                                <label class="control-label" id="radiobtns"> Icons: </label>
+                                <input type="radio" id= "input1" name="icon">
                                 <img src="coke.png" class="icon" />
-                                <input type="radio" name="icon">
+                                <input type="radio" id= "input2" name="icon">
                                 <img src="pepsi.png" class="icon" />
                             </form>
                             <label id="control-label">Comment:</label>
-                            <textarea id="control" row=8> </textarea>
-                            <input class="btn btn-default" type="button" value="Submit Comment">
+                            <textarea id="textarea" class="form-control"> </textarea>
+                            <input class="btn btn-default" type="button" id="submit-comment" value="Submit Comment" onclick="validate()">
                           </div>
         </div>
         </div> <!-- end comment row -->
