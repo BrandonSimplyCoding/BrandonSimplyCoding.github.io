@@ -94,23 +94,52 @@ if(blank_field == true){
 } else {
   message.innerHTML = "";
 }
-add();
+   add();
 }//end function validate
 
 var array = [];
 
 function add(){
-show();
-}//end function add
+  /* Variables */
+var name = document.getElementById("name");
+var title = document.getElementById("title");
+var textarea = document.getElementById("textarea");
+var icon = document.getElementsByName("icon"); 
+var icon_value;
 
-function show(){
-  var display=document.getElementById("display");
-var post=""; 
-for(var i=0; i < array.length; i++){
-post+="<strong> "+array[i].name+ "</strong><br>"; 
+var select_color = document.getElementById("text_color"); 
+var select_bgcolor = document.getElementById("bg_color");
+
+for(var i=0; i < icon.length; i++){
+  if(icon[i].checked == true){
+icon_value = icon[i].value; 
 }
-display.innerHTML = post;
-}//end function show
+}
+
+/* all variables and loops go above this */
+var storage = {name: name.value, title: title.value, comment: textarea.value, icon: icon_value, select_color: select_color.value, select_bgcolor: select_bgcolor.value};
+
+array.push(storage);
+
+  show();
+} //end function add
+
+function show(){ 
+  var display = document.getElementById("display"); 
+  var post = ""; 
+  for(var i=0; i < array.length; i++){
+    post += "<div style='background-color:"+array[i].select_bgcolor+";'>"; 
+    post += "<span style='color:"+array[i].select_color+";'>"; 
+    post += "<img src='"+array[i].icon+"' class='icon' />"; 
+    post+="<strong> "+array[i].name+ "</strong><br>"; 
+    post+="<strong> "+array[i].title+ "</strong><br>"; 
+    post+="<strong> "+array[i].comment+ "</strong><br>";
+    post += "</span>";
+    post += "</div>";
+} 
+display.innerHTML = post; 
+} //end function show
+
 </script>
  
  </head>
@@ -122,7 +151,6 @@ display.innerHTML = post;
            <center><div class="col-xs-12 col-sm-4" id="logo"><img class="irc_mi" src="http://s3.thingpic.com/images/Vh/YA111FcqSeUhd4hVXMfvjwmu.jpeg" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" width="304" height="171" style="margin-top: 111px;" alt="Image result"></div></center>
 
         </div><!-- end container div --> 
-        <div id="display"></div>
       </div><!-- end container div -->
       <div class="row"> 
 
@@ -138,6 +166,7 @@ display.innerHTML = post;
 
         <div class="row"> 
           <div class="col-xs-12 col-sm-8" id="comments">
+              <div id="display"></div>
           <div class="col-xs-12 col-sm-4" id="form"><header id="header">DROP A COMMENT</header>
                                                     <div id="message"></div>
                             <form id="form-inline">
@@ -166,9 +195,9 @@ display.innerHTML = post;
                             </form>
                             <form class="form-inline">
                                 <label class="control-label" id="radiobtns"> Icons: </label>
-                                <input type="radio" id= "input1" name="icon">
+                                <input type="radio" id= "input1" name="icon" value="coke.png">
                                 <img src="coke.png" class="icon" />
-                                <input type="radio" id= "input2" name="icon">
+                                <input type="radio" id= "input2" name="icon" value="pepsi.png">
                                 <img src="pepsi.png" class="icon" />
                             </form>
                             <label id="control-label">Comment:</label>
