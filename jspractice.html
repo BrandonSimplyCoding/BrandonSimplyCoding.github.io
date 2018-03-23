@@ -1,0 +1,102 @@
+<html>
+<head>
+<title> JavaScript Practice </title>
+<script>
+    function start(){
+        var age = 130;
+        var name = "Corban McCorndog";
+        alert(name + " is " + age);
+    }
+    function math(){
+            var math = 2 * 2 - 3 / 1 + 3;
+            alert(math);
+}
+function question(){
+    var question = prompt("What is my favorite color?");
+    if(question == "flourescent yellow") {
+alert("How did you... I guess I should have known you were stalking me.");
+} else {
+alert("Nope, you're wrong. Get a life.");
+}
+}
+function rate(){
+    var q = prompt("How much do you like me? on a scale of 1 - 10?");
+    if(q < 4) {
+alert(";-;");
+} else if (q < 7) {
+alert("Let's consider ourselves friends :)");
+} else {
+alert("Ok get away from me, it ain't gonna happen weirdo");
+}
+}
+function change(){
+    var edit = document.getElementById("find");
+    edit.innerHTML = "*Queue Wonderful and Majestic Music/Sounds*"
+}
+var pass = 1;
+function toggle(){
+    var twitch = document.getElementById("rotate");
+    if(pass == 1){
+
+        twitch.innerHTML = "You didn't see anything...";
+pass=2;
+}else if (pass == 2){
+twitch.innerHTML = "<img src= 'https://vignette.wikia.nocookie.net/minecraftstorymode/images/b/b4/Troll-1-.png/revision/latest?cb=20160617233944' />";
+pass = 3;
+} else {
+twitch.innerHTML = "No Telling What Secrets this Text has";
+pass = 1;
+}
+}//end function
+
+var games = ["Minecraft", "Fortnite", "Gaga-Ball", "WoW", 61];
+
+var sentence = "railroad crossing look out for the cars can you spell that without any r's";
+var array = [];
+for (var i = 0; i < sentence.length; i++){
+    if(sentence[i] == "r") {
+        array.push(sentence[i]);
+}
+}
+var pants = {color:"grey & white", price: 30.99, size: "Y Large", store: "Academy"};
+function obj(){
+    var ask = prompt("What do you want to know about my pants? (color, price, size, or store):");
+    alert("These pants' " + ask + " is " + pants[ask]);
+}
+function morph(){
+    var box = document.getElementById("box")
+    box.style.backgroundColor = "black";
+box.style.border = "12px ridge pink";
+box.innerHTML = "Woah dats Sketchy";
+}
+    </script>
+
+<style>
+#box{
+color: greenyellow;
+background-color: lightcoral;
+height: 250px;
+width: 250px;
+}
+</style>
+
+</head>
+<body>
+        <div>
+                There are <script>document.writeln(array.length);</script> r's in the sentence: "<script>document.writeln(sentence);</script>"
+                </div>
+        A game I like is,<span> <script> document.writeln(games[1]); </script> </span>
+        <div id="rotate">No Telling What Secrets this Text has</div>
+        <div id="find">My JavaScript Practice Page</div>
+        <input type="button" onclick="start()" value="Click Right Here">
+        <input type="button" onclick="math()" value="Quick Maths">
+        <input type="button" onclick="question()" value="Favorite Color">
+        <input type="button" onclick="rate()" value="Friendship Scale">
+        <input type="button" onclick="change()" value="The Wonderful Button of Wonderfullness">
+        <input type="button" onclick="toggle()" value="Change Button">
+        <input type="button" onclick="obj()" value="Pants Button">
+        <input type="button" onclick="morph()" value="Change the Square">
+        <div id="box">You're about to see some change</div>
+
+</body>
+</html>

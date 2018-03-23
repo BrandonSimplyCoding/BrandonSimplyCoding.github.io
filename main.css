@@ -1,90 +1,101 @@
- p{
-    color:brown;
-    font-size:25px;
-  }
-
-  .listitem {
-    color:maroon;
-    font-size:15px;
-    }
-  .paragraph {
-    color:saddlebrown;
-    font-size:1em;
-      }
+p { 
+  color: brown; 
+  font-size: 25px; 
+} 
   
-  #button {
-    width:150px;
-    height:30px;
-    color:rgb(200, 255, 0);
-    background-color:darkolivegreen;
-    border-radius:10px;
-    }
+.listitem { 
+  color: maroon; 
+  font-size: 15px; 
+} 
   
-  #one{
-    height: 150px;
-    width: 150px;
-    background-color: red;
-    display: inline-block;
-    }   
-    
-     .wrap-trivia {
-       height:85px;
-       width:350px;
-       border:5px double yellow;
-       }  
+.paragraph { 
+  color: saddlebrown; 
+  font-size: 2.5em; 
+} 
+  
+#button { 
+  width: 150px; 
+  height: 30px; 
+  color: rgb(200, 255, 0); 
+  background-color: darkolivegreen; 
+  border-radius: 10px; 
+} 
+  
+#one { 
+  height: 150px; 
+  width: 150px; 
+  background-color: red; 
+  display: inline-block; 
+} 
 
-     .wrap-list {
-       height:53px;
-       width:500px;
-       border:3px dashed rgb(54, 40, 0);
-       }
-    
-     .wrap-text {
-       color:green;
-       font-size: 2.1em;
-       }  
-    
-      
-        #logo {
-          margin-top:10px;
-          } 
-
-        #menu {
-          border:3px solid black;
-          margin-top:10px;
-          }
-
-          #comments {
-            border:5px solid brown;
-            margin-top:5px;
-            height:900px;
-            width:100%;
-            }
-
-          #form {
-            border:3px solid rgb(0, 158, 66);
-            height:700px;
-            float:right;
-            margin:10px;
-            width:30%;
-            }
-          
-            #menu {
-              margin:10px;
-              }
-            
-            body {
-              background: radial-gradient(100% 75% at 10% 30%, red, darkblue, maroon);
-              }
-            
-              #header {
-                text-align:center;
-                background-color:rgb(58, 16, 8);
-                font-size:2.75em;
-                text-decoration:bold;
-                color:white;
-                border-radius:10px;
-                margin-left:-16px;
-                margin-right:-16px;
-                margin-bottom:15px;
-                }
+#Q{ 
+font-size: 1.5em;
+color:rgb(203, 255, 192);
+} 
+  
+.wrap-trivia { 
+  height: 105px; 
+  width: 350px; 
+  border: 5px double yellow; 
+} 
+  
+.wrap-list { 
+  height: 70px; 
+  width: 500px; 
+  border: 3px dashed rgb(54, 40, 0); 
+} 
+  
+.wrap-text { 
+  color: rgb(0, 255, 0); 
+  font-size: 2.1em; 
+} 
+  
+#logo { 
+  margin-top: 10px; 
+} 
+  
+#menu { 
+  border: 3px solid black; 
+  margin-top: 10px; 
+} 
+  
+#comments { 
+  border: 5px solid brown; 
+  /* margin-top:5px; */ 
+  height: 900px; 
+  /* width:100%; */ 
+} 
+  
+#form { 
+  border: 3px solid rgb(0, 158, 66); 
+  height: 700px; 
+  /* float:right; */ 
+  /* margin:10px; */ 
+  /* width:30%; */ 
+} 
+  
+#menu { 
+  margin: 10px; 
+} 
+  
+body { 
+  background: radial-gradient(100% 75% at 10% 30%, red, darkblue, maroon); 
+} 
+  
+#header { 
+  text-align: center; 
+  background-color: rgb(142, 40, 19); 
+  font-size: 2.75em; 
+  text-decoration: bold; 
+  color: white; 
+  border-radius: 10px; 
+  margin-left: -16px; 
+  margin-right: -16px; 
+  margin-bottom: 15px; 
+} 
+  
+#usercomment { 
+  border: 2px solid grey; 
+  border-radius: 15px; 
+  width: 700px; 
+} 
